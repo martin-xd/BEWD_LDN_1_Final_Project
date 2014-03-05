@@ -1,0 +1,447 @@
+/* -------------------- 01 GENERAL --------------------- */
+
+
+body {
+	background: url(world_bg2.png) 0 0 no-repeat fixed #292e41;
+	font: 12px "Oxygen", Tahoma, Arial, sans-serif;
+	color: #dadada;
+}
+
+h1 {
+	font: 24px "Oxygen", Tahoma, Arial, sans-serif;
+	letter-spacing: 1px;
+}
+
+
+/* -------------------- 02 SIGN IN --------------------- */
+
+
+#sign_in_container {
+	width: 350px;
+	margin: 0px auto;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+	position: relative;
+	left: 10%;
+}
+
+#sign_in_logo {
+	font: bold 100px "Bree Serif", Tahoma, Arial, sans-serif;
+	color: #dadada;
+	text-decoration: none;
+	padding-top: 100px;
+}
+
+.fields {
+	width: 200px;
+	height: 30px;
+	display: inline-block;
+	margin-bottom: 20px;
+	background-color: #dadada;
+	border-style: none;
+	font: 16px "Oxygen", Tahoma, Arial, sans-serif;
+	text-indent: 5px;
+}
+
+#sign_in_button {
+	width: 200px;
+	height: 30px;
+	background-color: #e08b4b;
+	border-style: none;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+
+#sign_in_button:hover {
+	width: 200px;
+	height: 30px;
+	background-color: #c26219;
+	border-style: none;
+	color: #dadada;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+
+#links_div {
+	margin-top: 10px;
+}
+
+#sign_in_links {
+	color: #586491;
+	text-decoration: none;
+}
+
+#sign_in_links:hover {
+	color: #dadada;
+	text-decoration: none;
+}
+
+.forgot_password_field {
+	width: 250px;
+	height: 30px;
+	display: inline-block;
+	margin-bottom: 20px;
+	background-color: #dadada;
+	border-style: none;
+	font: 16px "Oxygen", Tahoma, Arial, sans-serif;
+	text-indent: 5px;
+}
+
+#forgot_password_button {
+	width: 250px;
+	height: 30px;
+	background-color: #e08b4b;
+	border-style: none;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+
+#forgot_password_button:hover {
+	width: 250px;
+	height: 30px;
+	background-color: #c26219;
+	border-style: none;
+	color: #dadada;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+
+
+/* ------------------ 03 LOGO + BANNER ------------------- */
+
+
+#banner {
+	background: url(navBG01.png) 0 0 repeat-x;
+	height: 103px;
+	margin: -8px;
+}
+
+#logo_box {
+	margin-top: 0px;
+	margin-left: 1px;
+	float: left;
+}
+
+#logo {
+	font: bold 60px "Bree Serif", Tahoma, Arial, sans-serif;
+	color: #dadada;
+}
+
+#logged_in {
+	color: #636a98;
+}
+
+#logout {
+	color: #dadada;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#logout:hover {
+	color: #ff2525;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+/* --------------------- 04 CONTAINER ---------------------- */
+
+
+#container {
+	width: 1270px;
+	left: 300px;
+	position: fixed;
+	top: -12px;
+}
+
+nav ul li {
+	display: block;
+	margin-left: -40px;
+}
+
+#icon_table {
+	background: url(table.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-right: 20px;
+}
+
+#icon_table:hover {
+	background: url(table_over.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+
+#icon_table_fix {
+	background: url(table_over.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-right: 20px;
+}
+
+#icon_world {
+	background: url(world.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-right: 20px;
+}
+
+#icon_world:hover {
+	background: url(world_over.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+
+#icon_world_fix {
+	background: url(world_over.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-right: 20px;
+}
+
+#icon_industry {
+	background: url(industry.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+
+#icon_industry:hover {
+	background: url(industry_over.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+
+#icon_industry_fix {
+	background: url(industry_over.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+
+#add_new_stock {
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+	text-decoration: none;
+	background-color: #1ea591;
+	padding: 5px 75px;
+	color: #292e41;
+}
+
+#add_new_stock:hover {
+	background-color: #037c6a;
+	color: #dadada;
+}
+
+#update_button {
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+	text-decoration: none;
+	background-color: #e08b4b;
+	padding: 5px 63px;
+	color: #292e41;
+	margin-top: -23px;
+	float: right;
+}
+
+#update_button:hover {
+	background-color: #c26219;
+	color: #dadada;}
+
+
+/* ------------------- 05 ADD NEW STOCK -------------------- */
+
+
+#add_stock_container {
+	width: 350px;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+
+#pull_down {
+	width: 200px;
+	height: 30px;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+	background-color: #dadada;
+	border-style: none;
+	margin-bottom: 20px;
+	text-indent: 1px;
+}
+
+#add_change_button {
+	width: 200px;
+	height: 30px;
+	background-color: #1ea591;
+	border-style: none;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+	color: #292e41;
+	margin-bottom: 20px;
+}
+
+#add_change_button:hover {
+	width: 200px;
+	height: 30px;
+	background-color: #037c6a;
+	border-style: none;
+	color: #dadada;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+
+#back_button {
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+	text-decoration: none;
+	background-color: #e08b4b;
+	padding: 5px 85px;
+	color: #292e41;
+}
+
+#back_button:hover {
+	background-color: #c26219;
+	color: #dadada;}
+	
+
+/* --------------------- 06 TABLE ---------------------- */
+
+
+#content_table {
+	margin-top: 30px;
+}
+
+table {
+	margin-top: 50px;
+}
+
+th {
+	background: #63677c;
+	font: bold 12px "Oxygen", Tahoma, Arial, sans-serif;
+	text-align: center;
+	padding: 5px 20px;
+	letter-spacing: 1px;
+	opacity: 1;
+	border: 1px solid #818181;
+}
+
+td {
+	background: #51566f;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+	text-align: center;
+	padding: 0px 5px;
+	letter-spacing: 1px;
+	opacity: 0.7;
+	color: #ffffff;
+}
+
+#table_edit_link {
+	color: #dadada;
+	text-decoration: none;
+}
+
+#table_edit_link:hover {
+	color: #fe941b;
+	text-decoration: none;
+}
+
+#table_delete_link {
+	color: #dadada;
+	text-decoration: none;
+}
+
+#table_delete_link:hover {
+	color: #ff2525;
+	text-decoration: none;
+}
+
+#total {
+	font: bold 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+
+#total_purchase_value {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font: bold 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+
+#total_current_value {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font: bold 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+
+#total_difference {
+	font-weight: bold;
+}
+
+.positive-difference {
+	color: #1cf31c;
+}
+
+.negative-difference {
+	color: #f04040;
+}
+
+
+/* -------------------- 07 EDIT STOCK ---------------------- */
+
+
+#content_edit_stocks {
+	margin-top: 30px;
+}
+
+#delete_button_div {
+	margin-top: 25px;
+	width: 500px;
+}
+
+#delete_button {
+	background-color: #c35050;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+	color: #292e41;
+	text-decoration: none;
+	padding: 5px 61px;
+}
+
+#delete_button:hover {
+	width: 200px;
+	height: 30px;
+	background-color: #a70707;
+	border-style: none;
+	color: #dadada;
+	font: 14px "Oxygen", Tahoma, Arial, sans-serif;
+}
+	
+
+/* --------------------- 08 COUNTRIES ---------------------- */
+
+
+#content_countries {
+	margin-top: 30px;
+}
+
+#globe {
+	background: url(globe03b.png) 0 0 no-repeat;
+	height: 600px;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+
+/* --------------------- 09 INDUSTRIES ---------------------- */
+
+
+#content_industries {
+	margin-top: 30px;
+}
+
+#cloud {
+	background: url(industry_cloud.png) 0 0 no-repeat;
+	height: 600px;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+
+
+

@@ -1,0 +1,5 @@
+<h2> Editing <%= @industry.sector %></h2>
+
+<%= render "form" %>
+
+<%= link_to "delete this industry", industry_path(@industry), method: :delete , confirm: "Are you sure?" %>

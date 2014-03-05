@@ -1,0 +1,101 @@
+<div id="banner">
+
+	<div id="logo_box">
+		<a id="logo">stocksy</a>
+	
+		<div id="logged_in">
+			<% if current_user %>
+				You're logged in as <%= current_user.email %>, <%=link_to "Logout", destroy_user_session_path, method: :delete, :id => "logout" %>
+			<% else %>
+				Hiya ! <%=link_to "Signin",  new_user_session_path%> or <%=link_to "Signup",  new_user_registration_path %> 
+			<% end %>
+		</div>
+	</div>
+
+	<div id="container">
+		<nav>
+			<ul>
+				<li>
+					<a id="icon_table_fix"></a>
+				</li>
+				<li>
+					<a id="icon_world" href="/countries/show"></a>
+				</li>
+				<li>
+					<a id="icon_industry" href="/industries/show"></a>
+				</li>
+			</ul>
+		</nav>
+	
+	
+		<div id="content_table">
+		
+		  <h1>Stocks in my portfolio</h1>
+		
+		  <div>
+		  <%= link_to("Add New Stock...", {:action => 'new'}, :id => "add_new_stock") %>
+		  </div>
+		  
+		  <div>
+		  <%= link_to("Update Current Price", {:action => 'index'}, :id => "update_button") %>
+		  </div>
+		
+		  <table>
+		    <tr>
+		      <th>Company</th>
+		      <th>Symbol</th>
+		      <th>Country</th>
+		      <th>Industry</th>
+		      <th>Volume</th>
+		      <th>Purchase Date</th>
+		      <th>Purchase Price</th>
+		      <th>Purchase Value</th>
+		      <th>Current Price</th>
+		      <th>Current Value</th>
+		      <th>Difference</th>
+		      <th>Actions</th>
+		    </tr>
+		    <% @stocks.each do |stock| %>
+		    	<% current_price = get_current_price(@realtime_values, stock.isin)%>
+		    <tr>
+		      <td><%= stock.name %></td>
+		      <td><%= stock.isin %></td>
+		      <td><%= stock.country.name if stock.country.present? %></td>
+		      <td><%= stock.industry.sector if stock.industry.present? %></td>
+		      <td><%= stock.volume %></td>
+		      <td><%= stock.purchased_on %></td>
+		      <td class="price_value"><%= stock.purchase_price.round(3) %></td>
+		      <td class="purchase_value"><%= (stock.volume * stock.purchase_price.round(3)) %></td>
+		      <td class="price_value"><%= current_price%></td>
+			  	<td class="current_value"><%= (stock.volume * current_price.to_f).round(3) %></td>
+	
+				<% difference = ((stock.volume * current_price.to_f) - (stock.volume * stock.purchase_price)).round(3)%>
+				<% if difference > 0 %>
+					<td class='positive-difference price_value'>
+				<% else %>
+					<td class='negative-difference price_value'>
+				<% end %>
+	
+				<%= difference %></td>
+		
+		      <td>
+		        <%= link_to "Edit", edit_stock_path(stock), :id => "table_edit_link" %>
+		        <%= link_to 'Delete', stock, method: :delete, data: { confirm: 'Are you sure?' }, :id => "table_delete_link" %>
+		      </td>
+		    </tr>
+		    <% end %>
+		    <tr>
+		    	<td colspan=6></td>
+		    	<td id="total">TOTAL:</td>
+		    	<td id="total_purchase_value"></td>
+		    	<td></td>
+		    	<td id="total_current_value"></td>
+		    	<td id="total_difference"></td>
+		    	<td></td>
+		    </tr>
+		  </table>
+		  
+		</div>
+		
+	</div>
+</div>

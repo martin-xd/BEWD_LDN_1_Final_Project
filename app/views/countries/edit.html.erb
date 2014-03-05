@@ -1,0 +1,5 @@
+<h2> Editing <%= @country.name %></h2>
+
+<%= render "form" %>
+
+<%= link_to "delete this stock", country_path(@country), method: :delete , confirm: "Are you sure?" %>

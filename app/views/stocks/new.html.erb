@@ -1,0 +1,39 @@
+<div id="banner">
+
+	<div id="logo_box">
+		<a id="logo">stocksy</a>
+	
+		<div id="logged_in">
+			<% if current_user %>
+				You're logged in as <%= current_user.email %>, <%=link_to "Logout", destroy_user_session_path, method: :delete, :id => "logout" %>
+			<% else %>
+				Hiya ! <%=link_to "Signin",  new_user_session_path%> or <%=link_to "Signup",  new_user_registration_path %> 
+			<% end %>
+		</div>
+	</div>
+
+	<div id="container">
+		<nav>
+			<ul>
+				<li>
+					<a id="icon_table_fix"></a>
+				</li>
+				<li>
+					<a id="icon_world" href="/countries/show"></a>
+				</li>
+				<li>
+					<a id="icon_industry" href="/industries/show"></a>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="content_table">
+		
+			<h1>Add new stock...</h1>
+
+			<%= render "form"%>
+			
+		</div>
+	</div>
+</div>
+

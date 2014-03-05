@@ -1,0 +1,25 @@
+<h1>Countries#index</h1>
+
+<div>
+  <h2>Countries in my portfolio</h2>
+
+  <%= link_to("Add New Country", {:action => 'new'}, :class => 'action new') %></br>
+
+  <table class="listing">
+    <tr class="header">
+      <th>Country</th>
+      <th>Actions</th>
+    </tr>
+    <% @countries.each do |country| %>
+    <tr id="table">
+      <td class="center"><%= country.name %></td>
+
+      <td class="actions">
+        <%= link_to "Edit", edit_country_path(country) %>
+
+        <%= link_to 'Delete', country, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

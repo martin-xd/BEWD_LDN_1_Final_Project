@@ -1,0 +1,55 @@
+<div id="sign_in_container">
+
+	<div id="sign_in_logo"
+		<h2>stocksy</h2>
+	</div>
+		
+		<div>
+			<h1>Sign up</h1>
+			
+			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+			  <%= devise_error_messages! %>
+			
+			  <div><%= f.label :email %><br />
+			  <%= f.email_field :email, :autofocus => true, :class => "fields" %></div>
+			
+			  <div><%= f.label :password %> (min. 8 characters)<br />
+			  <%= f.password_field :password, :class => "fields" %></div>
+			
+			  <div><%= f.label :password_confirmation %><br />
+			  <%= f.password_field :password_confirmation, :class => "fields" %></div>
+			
+			  <div><%= f.submit "Sign up", :id => "sign_in_button" %></div>
+			<% end %>
+			
+		</div>
+		<div id="links_div">
+			<%= render "devise/shared/links" %>
+		</div>
+</div>
+
+
+
+
+
+<!--<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>-->
+
+
+
